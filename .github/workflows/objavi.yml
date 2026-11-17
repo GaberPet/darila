@@ -1,0 +1,44 @@
+# Objavi stran na GitHub Pages.
+# Teče: ko spremenim karkoli, vsak dan ob 5h (osveži Steam igre) in ko kliknem "Osveži Steam igre".
+
+name: Objavi stran
+
+on:
+  push:
+    branches: [main, master]
+  schedule:
+    - cron: "0 4 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  objavi:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.objava.outputs.page_url }}
+    steps:
+      - name: Prenesi kodo
+        uses: actions/checkout@v4
+
+      - name: Preberi seznam želja s Steama
+        run: python3 skripte/steam.py
+        continue-on-error: true
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+
+      - name: Objavi
+        id: objava
+        uses: actions/deploy-pages@v4

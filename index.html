@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Moj seznam želja</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎁</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800&family=Pacifico&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/slog.css">
+</head>
+<body>
+
+  <!-- vrstica za urejanje (vidim jo samo jaz, ko se prijavim) -->
+  <div id="admin-vrstica" class="admin-vrstica" hidden>
+    <span>✏️ Urejaš svoj seznam</span>
+    <button class="gumb gumb-majhen" data-admin="dodaj">➕ Dodaj darilo</button>
+    <button class="gumb gumb-majhen" data-admin="nastavitve">⚙️ Nastavitve</button>
+    <button class="gumb gumb-majhen" data-admin="steam">🔄 Osveži Steam igre</button>
+    <button class="gumb gumb-majhen" data-admin="odjava">🚪 Odjava</button>
+  </div>
+
+  <header class="glava">
+    <div class="glava-vsebina">
+      <div class="pentlja">🎀</div>
+      <h1 id="naslov">Moj seznam želja</h1>
+      <p class="podnaslov">Tukaj so darila, ki bi me razveselila. Klikni na darilo za več podrobnosti.</p>
+    </div>
+  </header>
+
+  <nav class="zavihki">
+    <button class="zavihek aktiven" data-zavihek="darila">🎁 Darila</button>
+    <button class="zavihek" data-zavihek="priljubljene">❤️ Priljubljene <span id="st-priljubljenih" class="stevec">0</span></button>
+  </nav>
+
+  <main>
+    <!-- ===== ZAVIHEK: DARILA ===== -->
+    <section id="zavihek-darila" class="vsebina-zavihka">
+      <div class="filtri">
+        <input type="search" id="iskanje-darila" class="iskalnik" placeholder="🔍 Išči darilo ...">
+
+        <div class="skupina-filtrov">
+          <span class="oznaka-filtra">Vrsta darila:</span>
+          <div id="filter-kategorije" class="gumbi-filtra"></div>
+        </div>
+
+        <div class="skupina-filtrov">
+          <span class="oznaka-filtra">Cena:</span>
+          <div id="filter-cene-darila" class="gumbi-filtra"></div>
+        </div>
+
+        <div class="vrstica-filtrov">
+          <label class="kljukica"><input type="checkbox" id="samo-najbolj"> Samo ⭐⭐⭐ najbolj zaželena</label>
+          <label class="kljukica"><input type="checkbox" id="samo-v-trgovini"> Na voljo tudi v trgovini</label>
+          <label class="razvrsti">Razvrsti:
+            <select id="razvrsti-darila">
+              <option value="zelja">Najbolj zaželena najprej</option>
+              <option value="cena-gor">Najcenejša najprej</option>
+              <option value="cena-dol">Najdražja najprej</option>
+              <option value="novo">Najnovejša najprej</option>
+            </select>
+          </label>
+          <button id="pocisti-darila" class="gumb-pocisti">✖ Počisti filtre</button>
+        </div>
+      </div>
+
+      <p id="stevilo-daril" class="stevilo-zadetkov"></p>
+      <div id="mreza-darila" class="mreza"></div>
+    </section>
+
+    <!-- ===== ZAVIHEK: VIDEOIGRE ===== -->
+    <section id="zavihek-igre" class="vsebina-zavihka" hidden>
+      <a href="#darila" class="gumb gumb-vec nazaj">← Nazaj na darila</a>
+      <div class="steam-uvod">
+        <h2>🎮 Igre z mojega seznama želja na Steamu</h2>
+        <p id="steam-posodobljeno" class="drobno"></p>
+
+        <details class="kako-podarim">
+          <summary>❓ Kako podarim igro na Steamu?</summary>
+          <ol>
+            <li>Pri igri klikni <b>»Kupi na Steamu«</b>.</li>
+            <li>Prijavi se v svoj Steam račun. Če ga še nimaš, ga lahko narediš brezplačno.</li>
+            <li>Klikni <b>»Dodaj v košarico«</b> (<i>Add to Cart</i>), nato v košarici izberi <b>»Kupi kot darilo«</b> (<i>Purchase as a gift</i>).</li>
+            <li>Izberi mene s seznama prijateljev in plačaj. Igra se mi bo pojavila na Steamu.</li>
+          </ol>
+          <p>Da mi lahko podariš igro, morava biti na Steamu prijatelja. Lahko mi podariš tudi <b>Steam darilno kartico</b>.</p>
+          <p id="steam-povezave" class="steam-povezave"></p>
+        </details>
+      </div>
+
+      <div class="filtri">
+        <input type="search" id="iskanje-igre" class="iskalnik" placeholder="🔍 Išči igro ...">
+
+        <div class="skupina-filtrov">
+          <span class="oznaka-filtra">Cena:</span>
+          <div id="filter-cene-igre" class="gumbi-filtra"></div>
+        </div>
+
+        <div class="vrstica-filtrov">
+          <label class="kljukica"><input type="checkbox" id="samo-popust"> Samo igre na popustu 🏷️</label>
+          <label class="kljukica"><input type="checkbox" id="samo-priljubljene-igre"> Samo priljubljene ❤️</label>
+          <label class="razvrsti">Zvrst:
+            <select id="zvrst-igre"><option value="vse">Vse zvrsti</option></select>
+          </label>
+          <label class="razvrsti">Razvrsti:
+            <select id="razvrsti-igre">
+              <option value="seznam">Kot na mojem seznamu</option>
+              <option value="cena-gor">Najcenejše najprej</option>
+              <option value="cena-dol">Najdražje najprej</option>
+              <option value="popust">Največji popust</option>
+            </select>
+          </label>
+          <button id="pocisti-igre" class="gumb-pocisti">✖ Počisti filtre</button>
+        </div>
+      </div>
+
+      <p id="stevilo-iger" class="stevilo-zadetkov"></p>
+      <div id="mreza-igre" class="mreza"></div>
+    </section>
+
+    <!-- ===== ZAVIHEK: PRILJUBLJENE ===== -->
+    <section id="zavihek-priljubljene" class="vsebina-zavihka" hidden>
+      <div class="info-okvir">
+        Tukaj so darila, ki so označena s srčkom ❤️.
+        Shranjena so samo na tej napravi, zato jih drugi ne vidijo.
+      </div>
+      <div id="mreza-priljubljene" class="mreza"></div>
+    </section>
+  </main>
+
+  <footer class="noga">
+    <button id="gumb-dodaj" class="gumb gumb-noga">🔒 Dodaj darilo</button>
+    <p>Narejeno z ❤️ · <span id="leto"></span> <a href="#igre" class="skrita-povezava" title="Videoigre">🎮</a></p>
+  </footer>
+
+  <!-- okno s podrobnostmi darila ali igre -->
+  <dialog id="okno-podrobnosti" class="okno">
+    <div id="vsebina-podrobnosti"></div>
+  </dialog>
+
+  <!-- okno za prijavo in urejanje -->
+  <dialog id="okno-admin" class="okno">
+    <div id="vsebina-admin"></div>
+  </dialog>
+
+  <div id="obvestilo" class="obvestilo" hidden></div>
+
+  <script src="js/stran.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>
