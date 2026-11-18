@@ -5,5 +5,9 @@
     "uporabnik": "GaberPet",
     "repozitorij": "darila"
   },
-  "zaklenjenKljuc": null
+  "zaklenjenKljuc": {
+    "sol": "JzmdbF9ixBAu8aMGh72IGg==",
+    "iv": "T3ztWt+Wc5DJP/e8",
+    "podatki": "fpro/1Woyh1tpQ7kZGhmslKCF0Z8rRjnaiYFZBhxXDQY6przSZlLFXM/bB5ceO2AfybldBVAUCc4BOehyjaZAlgPLM+fObNKQN3s+A+D4xY2Fwr28f0pTQHLgidSGOYu8xVWuqHzOU4+JvgAng=="
+  }
 }
