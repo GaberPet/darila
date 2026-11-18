@@ -1,1 +1,54 @@
-[]
+[
+  {
+    "id": "libernovo-omni-stol",
+    "ime": "LiberNovo Omni ergonomski stol",
+    "slika": "https://cdn.shopify.com/s/files/1/0911/8452/9741/files/1_f2285e25-3199-4d04-8204-e868ec5ab269.png?v=1777358397",
+    "cena": 800,
+    "kategorija": "soba",
+    "zelja": 2,
+    "povezava": "https://eu.libernovo.com/products/libernovo-omni-dynamic-ergonomic-chair",
+    "trgovina": "LiberNovo EU (uradna trgovina)",
+    "trgovine": [],
+    "opis": "Ergonomski pisarniški stol z naslonjalom, ki se samo prilagaja gibanju, in vgrajenim raztezanjem hrbta. Ima tudi naslon za noge.\nVelikost sedeža: 45 cm ali 48 cm.\nDostava v Slovenijo je brezplačna, 30 dni za preizkus. Cena je pogosto znižana, zato preveri v trgovini.",
+    "dodano": "2026-11-18"
+  },
+  {
+    "id": "sennheiser-hdb-630",
+    "ime": "Slušalke Sennheiser HDB 630",
+    "slika": "https://cdn.shopify.com/s/files/1/0553/9636/8578/files/hdb_630_front_final.png?v=1756125732",
+    "cena": 500,
+    "kategorija": "elektronika",
+    "zelja": 2,
+    "povezava": "https://www.bigbang.si/hdb-630-bluetooth-usb-c-sennheiser-izdelek-5000075625/",
+    "trgovina": "Big Bang",
+    "trgovine": [],
+    "opis": "Brezžične slušalke z odpravljanjem hrupa (ANC) in do 60 ur baterije.\nBarva: črna ali srebrna (Lunar Silver).\nV škatli so tudi USB-C ključek BTD 700, kabli in torbica.\nProdajajo jih tudi Mimovrste, Shoppster in druge slovenske spletne trgovine (okoli 460–500 €).",
+    "dodano": "2026-11-18"
+  },
+  {
+    "id": "caldigit-ts4",
+    "ime": "CalDigit TS4 priklopna postaja",
+    "slika": "https://cdn.shopify.com/s/files/1/0959/6492/2147/files/TS4_VerticalRightFrontView_WhiteBG_c31d280b-3c9b-4982-bcf1-69a0638c5a68.jpg?v=1761207532",
+    "cena": 430,
+    "kategorija": "elektronika",
+    "zelja": 2,
+    "povezava": "https://www.amazon.de/dp/B09GFT334R",
+    "trgovina": "Amazon.de",
+    "trgovine": [],
+    "opis": "Priklopna postaja (dock) za računalnik z 18 priključki. Polni prenosnik (98 W) in ima omrežni priključek 2,5 Gb.\nDeluje s Thunderbolt 4/3, USB4 in USB-C.\nV škatli sta tudi kabel in napajalnik.",
+    "dodano": "2026-11-18"
+  },
+  {
+    "id": "bambu-lab-a1-mini",
+    "ime": "3D tiskalnik Bambu Lab A1 mini",
+    "slika": "https://store.bblcdn.eu/s8/default/1604d9e9669947d2a62d1deb5eef7bef/A1_mini.jpg",
+    "cena": 190,
+    "kategorija": "elektronika",
+    "zelja": 2,
+    "povezava": "https://eu.store.bambulab.com/products/a1-mini",
+    "trgovina": "Bambu Lab EU (uradna trgovina)",
+    "trgovine": [],
+    "opis": "Najcenejši 3D tiskalnik Bambu Lab. Pride že sestavljen, nastavitev traja okoli 20 minut in se sam kalibrira.\nVelikost tiskanja: 18 × 18 × 18 cm.\nRazličica »Combo« (z AMS lite za tiskanje v 4 barvah) stane okoli 280–300 €.\nV škatli je le majhen vzorec filamenta, zato je dodaten filament dobro darilo zraven.",
+    "dodano": "2026-11-18"
+  }
+]
