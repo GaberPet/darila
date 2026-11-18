@@ -50,5 +50,57 @@
     "trgovine": [],
     "opis": "Najcenejši 3D tiskalnik Bambu Lab. Pride že sestavljen, nastavitev traja okoli 20 minut in se sam kalibrira.\nVelikost tiskanja: 18 × 18 × 18 cm.\nRazličica »Combo« (z AMS lite za tiskanje v 4 barvah) stane okoli 280–300 €.\nV škatli je le majhen vzorec filamenta, zato je dodaten filament dobro darilo zraven.",
     "dodano": "2026-11-18"
+  },
+  {
+    "id": "avicii-majica-crna",
+    "ime": "Avicii Tribute majica (črna)",
+    "slika": "https://cdn.shopify.com/s/files/1/0921/8620/files/2_d17a4ab3-d1d4-4f16-a8fa-77c44611fbcf.jpg?v=1783502117&width=800",
+    "cena": 70,
+    "kategorija": "oblacila",
+    "zelja": 2,
+    "povezava": "https://store.tomorrowland.com/en-eu/products/avicii-tribute-t-shirt-black",
+    "trgovina": "Tomorrowland Store",
+    "trgovine": [],
+    "opis": "Uradna majica Avicii Tribute iz trgovine Tomorrowland. Motiv Avicii je na hrbtni strani.\nVelikost: L\nBarva: črna",
+    "dodano": "2026-11-18"
+  },
+  {
+    "id": "avicii-majica-siva",
+    "ime": "Avicii Tribute majica (siva)",
+    "slika": "https://cdn.shopify.com/s/files/1/0921/8620/files/SS26T-M238_Back.jpg?v=1783502092&width=800",
+    "cena": 70,
+    "kategorija": "oblacila",
+    "zelja": 2,
+    "povezava": "https://store.tomorrowland.com/en-eu/products/avicii-t-shirt-grey",
+    "trgovina": "Tomorrowland Store",
+    "trgovine": [],
+    "opis": "Uradna majica Avicii Tribute iz trgovine Tomorrowland. Motiv Avicii je na hrbtni strani.\nVelikost: L\nBarva: temno siva",
+    "dodano": "2026-11-18"
+  },
+  {
+    "id": "avicii-majica-bela",
+    "ime": "Avicii Tribute majica (bela)",
+    "slika": "https://cdn.shopify.com/s/files/1/0921/8620/files/6_1b22e163-228e-4903-9ead-bdcace0fd0dd.jpg?v=1783502326&width=800",
+    "cena": 70,
+    "kategorija": "oblacila",
+    "zelja": 2,
+    "povezava": "https://store.tomorrowland.com/en-eu/products/avicii-tribute-t-shirt-white",
+    "trgovina": "Tomorrowland Store",
+    "trgovine": [],
+    "opis": "Uradna majica Avicii Tribute iz trgovine Tomorrowland. Motiv Avicii je na hrbtni strani.\nVelikost: L\nBarva: bela",
+    "dodano": "2026-11-18"
+  },
+  {
+    "id": "avicii-pulover-crn",
+    "ime": "Avicii Tribute pulover s kapuco (črn)",
+    "slika": "https://cdn.shopify.com/s/files/1/0921/8620/files/SS26F-M235_Back.jpg?v=1783502104&width=800",
+    "cena": 120,
+    "kategorija": "oblacila",
+    "zelja": 2,
+    "povezava": "https://store.tomorrowland.com/en-eu/products/avicii-tribute-hoodie-black",
+    "trgovina": "Tomorrowland Store",
+    "trgovine": [],
+    "opis": "Uradni pulover s kapuco Avicii Tribute iz trgovine Tomorrowland. Motiv Avicii je na hrbtni strani.\nVelikost: L\nBarva: črna",
+    "dodano": "2026-11-18"
   }
 ]
